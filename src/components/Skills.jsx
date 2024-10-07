@@ -6,11 +6,15 @@ import Pill from './Pill';
 const Skills = () => {
   const skill=['Javascript','Html','CSS','Php','Python','MySql']
   return (
-      <div className='' >
-      <Section icon={<Code/>} sectionTitle="Skills">
-      {skill.map(title=><Pill title={title}></Pill>)}
+      <div className='flex flex-wrap ' >
+      <Section className=''icon={<Code/>} sectionTitle="Skills">
+     <div className='flex flex-wrap '>
+     {skill.map(title=><Pill title={title} key={title}></Pill>)}
+     </div>
+
       </Section>
-    </div>
+     </div>
+   
   )
 }
 export default Skills
